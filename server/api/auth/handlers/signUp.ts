@@ -47,7 +47,7 @@ export const signUp = async (
     if (errors) {
       return res.status(400).json({
         success: false,
-        errors: generateMoongoseValidationErrorList(errors),
+        errors: generateMoongoseValidationErrorList(errors, '/sign-up'),
       });
     }
 
